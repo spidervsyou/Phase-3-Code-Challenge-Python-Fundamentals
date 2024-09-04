@@ -1,4 +1,13 @@
 def count_vowels(text):
-    """Returns the number of vowels in the input string, case insensitive."""
-    vowels = "aeiouAEIOU"
-    return sum(1 for char in text if char in vowels)
+    vowels = 'aeiou'
+    count = 0
+    # Count vowels in the text (ignore case)
+    for char in text.lower():
+        if char in vowels:
+            count += 1
+    return count
+
+# Example 
+if __name__ == "__main__":
+    text = "Programming"
+    print(f"The number of vowels in '{text}' is {count_vowels(text)}")

@@ -1,10 +1,14 @@
-def decorator_func(func):
-    """A simple decorator that prints a message before calling the original function."""
-    def wrapper(*args, **kwargs):
-        print("Decorator Applied")
-        return func(*args, **kwargs)
-    return wrapper
-
 def apply_decorator(func):
-    """Applies the decorator to the input function."""
-    return decorator_func(func)
+    def decorator_func():
+        # Print a message before calling the function
+        print("Decorator Applied")
+        func()
+    return decorator_func
+
+# Example 
+if __name__ == "__main__":
+    @apply_decorator
+    def say_hello():
+        print("Hello, people!")
+
+    say_hello()

@@ -1,10 +1,9 @@
-class Car:
-    def __init__(self, make, model, year):
-        """Initializes a new car instance."""
-        self.make = make
-        self.model = model
-        self.year = year
+def __init__(car_instance, make, model, year):
+     # Initialize car information
+    car_instance.make = make
+    car_instance.model = model
+    car_instance.year = year
 
-    def display_info(self):
-        """Displays the car's information."""
-        print(f"Make: {self.make}, Model: {self.model}, Year: {self.year}")
+def display_info(car_instance):
+    # Print car information
+    print(f"Make: {car_instance.make}, Model: {car_instance.model}, Year: {car_instance.year}")
